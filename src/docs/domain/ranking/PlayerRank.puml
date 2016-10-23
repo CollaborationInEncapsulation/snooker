@@ -1,0 +1,17 @@
+@startuml
+
+!include ../player/player.puml
+!include rank.puml
+
+package ua.cie.snooker.domain.ranking {
+
+    PlayerRank o-- Player
+    PlayerRank o-- Rank
+
+    class PlayerRank {
+        Player player
+        Rank rank
+    }
+}
+
+@enduml

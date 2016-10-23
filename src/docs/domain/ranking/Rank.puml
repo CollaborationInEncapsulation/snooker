@@ -1,0 +1,10 @@
+@startuml
+
+package ua.cie.snooker.domain.ranking {
+    class Rank {
+        Long position
+        Double points
+    }
+}
+
+@enduml
