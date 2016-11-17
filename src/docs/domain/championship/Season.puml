@@ -1,0 +1,10 @@
+@startuml
+
+package  ua.cie.snooker.domain.championship {
+
+    class Season {
+        int year
+    }
+}
+
+@enduml

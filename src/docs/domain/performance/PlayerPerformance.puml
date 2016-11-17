@@ -1,0 +1,20 @@
+@startuml
+
+!include ../player/Player.puml
+!include Performance.puml
+
+package ua.cie.snooker.domain.performance {
+
+    PlayerPerformance o-- Player
+    PlayerPerformance *-- Performance
+
+    class PlayerPerformance {
+        Long id
+        Player name
+        Performance performance
+
+        void registerBreak(int points)
+    }
+}
+
+@enduml

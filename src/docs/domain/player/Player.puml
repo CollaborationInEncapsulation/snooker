@@ -2,6 +2,7 @@
 
 package  ua.cie.snooker.domain.player {
     class Player {
+        Long id
         String name
     }
 }
