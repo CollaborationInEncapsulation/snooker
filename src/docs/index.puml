@@ -1,14 +1,8 @@
 @startuml
 
 !include domain/player/Player.puml
-!include domain/ranking/PlayerRank.puml
-!include domain/ranking/Rank.puml
-!include domain/performance/Performance.puml
-!include domain/performance/PlayerPerformance.puml
 !include domain/performance/PlayerPerformance.puml
 !include domain/championship/Championship.puml
-!include domain/championship/Season.puml
-!include domain/championship/Seeding.puml
-!include domain/championship/Stage.puml
+!include domain/ranking/PlayerRank.puml
 
 @enduml

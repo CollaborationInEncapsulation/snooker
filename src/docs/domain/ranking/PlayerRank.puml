@@ -1,6 +1,7 @@
 @startuml
 
 !include ../player/Player.puml
+!include ../championship/Championship.puml
 !include Rank.puml
 
 package ua.cie.snooker.domain.ranking {

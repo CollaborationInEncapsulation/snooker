@@ -10,7 +10,7 @@
 package  ua.cie.snooker.domain.championship {
 
     Championship o-- Player
-    Championship ..> PlayerRank
+    Championship <..> PlayerRank
     Championship *-- Seeding
     Championship *-- Season
     Championship *-- "*" Stage
