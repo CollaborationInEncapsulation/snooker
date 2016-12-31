@@ -1,0 +1,4 @@
+entity Rank {
+    position Long,
+    points Long 
+}

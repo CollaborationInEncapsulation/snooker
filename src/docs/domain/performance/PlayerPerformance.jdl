@@ -1,0 +1,8 @@
+entity PlayerPerformance {
+    id Long 
+}
+
+relationship OneToOne {
+    PlayerPerformance{ player(id)  } to Player
+    PlayerPerformance{ performance } to Performance
+}

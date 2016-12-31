@@ -1,0 +1,8 @@
+entity PlayerRank {
+    id Long
+}
+
+relationship OneToOne {
+    PlayerRank{ player(id) } to Player
+    PlayerRank{ rank } to Rank
+}
