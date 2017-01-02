@@ -1,0 +1,15 @@
+entity Stage {
+    name String,
+    winningPoints Integer,
+    stageType Stages
+}
+
+enum Stages {
+    FINAL,
+    SEMI_FINAL,
+    QUARTER_FINAL
+}
+
+relationship ManyToOne {
+    Stage{ players } to Player
+}

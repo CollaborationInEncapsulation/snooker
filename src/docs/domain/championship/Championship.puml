@@ -19,14 +19,14 @@ package  ua.cie.snooker.domain.championship {
         Long id
         String name
         Long size
-        Player defendingChampion
+        Player defendingChampion 
         Season season
         Seeding seeding
         Stage[] stages
         Stage currentStage
 
 
-        Player[] proceedWithoutQualification(SortedSet<PlayerRank> rankTable)
+        Player[] proceedWithoutQualification(SortedSet<Player> rankTable)
         void winInCurrentStage(Player player)
         void assignPlayerToStage(Player player, Stage stage)
     }
