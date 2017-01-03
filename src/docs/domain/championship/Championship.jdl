@@ -3,13 +3,14 @@ entity Championship {
     name String,
     size Long
 }
+
 relationship OneToOne {
-    Championship{ defendingChampion(id) } to Player
-    Championship{ currentStage(name) } to Stage
-    Championship{ seeding } to Seeding
+    Championship{ defendingChampion(id) } to Player,
+    Championship{ currentStage(name) } to Stage,
+    Championship{ seeding } to Seeding,
     Championship{ season } to Season
 }
 
-relationship ManyToOne {
+relationship OneToMany {
     Championship{ stages } to Stage
 }

@@ -3,6 +3,6 @@ entity PlayerPerformance {
 }
 
 relationship OneToOne {
-    PlayerPerformance{ player(id)  } to Player
+    PlayerPerformance{ player(id)  } to Player,
     PlayerPerformance{ performance } to Performance
 }

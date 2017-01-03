@@ -1,5 +1,5 @@
 entity Seeding {
 }
-relationship ManyToOne {
+relationship OneToMany {
     Seeding{ players } to Player
 }
