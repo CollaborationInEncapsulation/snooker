@@ -6,3 +6,5 @@ relationship OneToOne {
     PlayerRank{ player(id) } to Player,
     PlayerRank{ rank } to Rank
 }
+
+microservice PlayerRank, Rank, Player with Rank 

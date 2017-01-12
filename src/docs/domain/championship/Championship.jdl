@@ -14,3 +14,5 @@ relationship OneToOne {
 relationship OneToMany {
     Championship{ stages } to Stage
 }
+
+microservice Championship, Player, Stage, Seeding, Season with Championship

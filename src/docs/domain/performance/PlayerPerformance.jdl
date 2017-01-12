@@ -6,3 +6,5 @@ relationship OneToOne {
     PlayerPerformance{ player(id)  } to Player,
     PlayerPerformance{ performance } to Performance
 }
+
+microservice PlayerPerformance, Performance with Performance

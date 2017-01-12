@@ -2,3 +2,5 @@ entity Player {
     id Long,
     name String
 }
+
+microservice Player with Player
