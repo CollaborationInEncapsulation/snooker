@@ -1,0 +1,3 @@
+entity Season {
+    year Integer
+}

@@ -1,0 +1,35 @@
+@startuml
+
+!include ../player/Player.puml
+!include ../ranking/PlayerRank.puml
+!include Seeding.puml
+!include Stage.puml
+!include Season.puml
+
+
+package  ua.cie.snooker.domain.championship {
+
+    Championship o-- Player
+    Championship <..> PlayerRank
+    Championship *-- Seeding
+    Championship *-- Season
+    Championship *-- "*" Stage
+
+    class Championship {
+        Long id
+        String name
+        Long size
+        Player defendingChampion 
+        Season season
+        Seeding seeding
+        Stage[] stages
+        Stage currentStage
+
+
+        Player[] proceedWithoutQualification(SortedSet<Player> rankTable)
+        void winInCurrentStage(Player player)
+        void assignPlayerToStage(Player player, Stage stage)
+    }
+}
+
+@enduml

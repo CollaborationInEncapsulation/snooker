@@ -1,0 +1,24 @@
+{
+  "name": "smart-steam-shop-server",
+  "version": "0.0.0",
+  "description": "Description for SmartSteamShopServer",
+  "private": true,
+  "cacheDirectories": [
+    "node_modules",
+    "src/main/webapp/bower_components"
+  ],
+  "devDependencies": {
+    "yo": "latest",
+    "generator-jhipster": "latest"
+  },
+  "engines": {
+    "node": "^4.6.0"
+  },
+  "scripts": {
+    "postinstall": "npm run install-ms",
+    "install-ms": "npm run install-player-ms",
+    "install-player-ms": "cd ./src/player/ && yo jhipster --force && yo jhipster:import-jdl ../docs/domain/player/Player.jdl --force && cd ./",
+    "install-rank-ms": "cd ./src/rank/ && yo jhipster --force && yo jhipster:import-jdl ../docs/domain/rank/Rank.jdl --force && cd ./"
+  }
+}
+ 

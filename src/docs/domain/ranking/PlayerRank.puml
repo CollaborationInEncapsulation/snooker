@@ -1,0 +1,21 @@
+@startuml
+
+!include ../player/Player.puml
+!include ../championship/Championship.puml
+!include Rank.puml
+
+package ua.cie.snooker.domain.ranking {
+
+    PlayerRank o-- Player
+    PlayerRank *-- Rank
+
+    class PlayerRank {
+        Long id
+        Player player
+        Rank rank
+
+        void increaseRank(Championship championship, Long points)
+    }
+}
+
+@enduml

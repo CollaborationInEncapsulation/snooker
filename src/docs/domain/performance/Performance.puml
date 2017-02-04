@@ -1,0 +1,11 @@
+@startuml
+
+package  ua.cie.snooker.domain.performance {
+
+    class Performance {
+        Long centuries
+        Long maximums
+    }
+}
+
+@enduml

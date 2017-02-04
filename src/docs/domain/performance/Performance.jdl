@@ -1,0 +1,4 @@
+entity Performance {
+    centuries Long,
+    maximums Long
+}

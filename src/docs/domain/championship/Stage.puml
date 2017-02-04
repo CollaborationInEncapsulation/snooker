@@ -1,0 +1,26 @@
+@startuml
+
+!include ../player/Player.puml
+
+package  ua.cie.snooker.domain.championship {
+
+    Stage o-- "2..64" Player
+    Stage *-- "1" Stages
+
+    class Stage {
+        String name
+        Player[] players
+        int winningPoints
+        Stages stageType
+    }
+
+    enum Stages {
+        int capacity
+
+        FINAL
+        SEMI_FINAL
+        QUARTER_FINAL
+    }
+}
+
+@enduml

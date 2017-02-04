@@ -1,0 +1,5 @@
+entity Seeding {
+}
+relationship OneToMany {
+    Seeding{ players } to Player
+}
