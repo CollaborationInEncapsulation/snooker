@@ -5,15 +5,12 @@ import ua.cie.snooker.domain.player.domain.Player;
 
 import ua.cie.snooker.domain.player.repository.PlayerRepository;
 import ua.cie.snooker.domain.player.web.rest.util.HeaderUtil;
-
+import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.inject.Inject;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -27,9 +24,14 @@ import java.util.Optional;
 public class PlayerResource {
 
     private final Logger log = LoggerFactory.getLogger(PlayerResource.class);
+
+    private static final String ENTITY_NAME = "player";
         
-    @Inject
-    private PlayerRepository playerRepository;
+    private final PlayerRepository playerRepository;
+
+    public PlayerResource(PlayerRepository playerRepository) {
+        this.playerRepository = playerRepository;
+    }
 
     /**
      * POST  /players : Create a new player.
@@ -43,11 +45,11 @@ public class PlayerResource {
     public ResponseEntity<Player> createPlayer(@RequestBody Player player) throws URISyntaxException {
         log.debug("REST request to save Player : {}", player);
         if (player.getId() != null) {
-            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("player", "idexists", "A new player cannot already have an ID")).body(null);
+            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "idexists", "A new player cannot already have an ID")).body(null);
         }
         Player result = playerRepository.save(player);
         return ResponseEntity.created(new URI("/api/players/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert("player", result.getId().toString()))
+            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
     }
 
@@ -69,7 +71,7 @@ public class PlayerResource {
         }
         Player result = playerRepository.save(player);
         return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert("player", player.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, player.getId().toString()))
             .body(result);
     }
 
@@ -97,11 +99,7 @@ public class PlayerResource {
     public ResponseEntity<Player> getPlayer(@PathVariable Long id) {
         log.debug("REST request to get Player : {}", id);
         Player player = playerRepository.findOne(id);
-        return Optional.ofNullable(player)
-            .map(result -> new ResponseEntity<>(
-                result,
-                HttpStatus.OK))
-            .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(player));
     }
 
     /**
@@ -115,7 +113,7 @@ public class PlayerResource {
     public ResponseEntity<Void> deletePlayer(@PathVariable Long id) {
         log.debug("REST request to delete Player : {}", id);
         playerRepository.delete(id);
-        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert("player", id.toString())).build();
+        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
 
 }
