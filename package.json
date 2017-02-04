@@ -17,6 +17,8 @@
   "scripts": {
     "postinstall": "npm run install-ms",
     "install-ms": "npm run install-player-ms",
-    "install-player-ms": "cd ./src/player/ && yo jhipster --force && cd ./" 
+    "install-player-ms": "cd ./src/player/ && yo jhipster --force && yo jhipster:import-jdl ../docs/domain/player/Player.jdl --force && cd ./",
+    "install-rank-ms": "cd ./src/rank/ && yo jhipster --force && yo jhipster:import-jdl ../docs/domain/rank/Rank.jdl --force && cd ./"
   }
 }
+ 

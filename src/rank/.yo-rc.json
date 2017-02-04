@@ -1,10 +1,10 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "3.12.2",
-    "baseName": "Player",
-    "packageName": "ua.cie.snooker.domain.player",
-    "packageFolder": "ua/cie/snooker/domain/player",
-    "serverPort": "8081",
+    "jhipsterVersion": "4.0.0",
+    "baseName": "Rank",
+    "packageName": "ua.cie.snooker.domain.rank",
+    "packageFolder": "ua/cie/snooker/domain/rank",
+    "serverPort": "8082",
     "authenticationType": "jwt",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
@@ -30,8 +30,6 @@
     "nativeLanguage": "ru",
     "languages": [
       "ru"
-    ],
-    "clientFramework": "angular1",
-    "clientPackageManager": "npm"
+    ]
   }
 }

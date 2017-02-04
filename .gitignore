@@ -17,3 +17,7 @@ hs_err_pid*
 
 #NodeJs
 node_modules
+npm-*.log
+
+#VSCode
+.vscode
