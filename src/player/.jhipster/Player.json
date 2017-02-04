@@ -7,7 +7,7 @@
             "fieldType": "String"
         }
     ],
-    "changelogDate": "20170113081906",
+    "changelogDate": "20170204085103",
     "entityTableName": "player",
     "dto": "no",
     "pagination": "no",

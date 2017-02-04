@@ -1,6 +1,6 @@
 package ua.cie.snooker.domain.player.config;
 
-import ua.cie.snooker.domain.player.config.locale.AngularCookieLocaleResolver;
+import io.github.jhipster.config.locale.AngularCookieLocaleResolver;
 
 import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.context.EnvironmentAware;

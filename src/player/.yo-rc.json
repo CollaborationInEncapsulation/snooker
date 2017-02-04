@@ -1,6 +1,5 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "3.12.2",
     "baseName": "Player",
     "packageName": "ua.cie.snooker.domain.player",
     "packageFolder": "ua/cie/snooker/domain/player",
@@ -31,7 +30,8 @@
     "languages": [
       "ru"
     ],
-    "clientFramework": "angular1",
-    "clientPackageManager": "npm"
+    "clientFramework": "angular2",
+    "clientPackageManager": "npm",
+    "jhipsterVersion": "4.0.1"
   }
 }
