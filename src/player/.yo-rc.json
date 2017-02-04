@@ -1,6 +1,6 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "4.0.1"
+    "jhipsterVersion": "4.0.1",
     "baseName": "Player",
     "packageName": "ua.cie.snooker.domain.player",
     "packageFolder": "ua/cie/snooker/domain/player",
